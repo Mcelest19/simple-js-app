@@ -1,0 +1,34 @@
+
+body {
+    font-family: 'Source+Sans+Pro', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    /* Sets the font size to 16px */
+    line-height: 1.6;
+    /* Sets the line-height to 1.6 */
+}
+h1 {
+    font-size: 30px;
+    font-weight: 300;    
+}
+* {
+    box-sizing: border-box;
+  }
+.content{
+    width: 700px;
+    margin: 0 auto;    
+    padding: 40px;
+}
+.page-header {
+    display: flex;
+    width: 600;
+    margin: 0 auto; 
+    padding: 20px;
+    text-align: center;
+}
+.page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
