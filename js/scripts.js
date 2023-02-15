@@ -1,6 +1,6 @@
 let pokemonRepository = (function (){
     let pokemonList = [];
-    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=20';
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=120';
    
         
     function add(pokemon){
@@ -23,6 +23,7 @@ let pokemonRepository = (function (){
         let pokemonList = document.querySelector(".pokemon-list");
         let listElement = document.createElement("li");
         listElement.classList.add("group-list-item")
+        listElement.classList.add('col')
 
         //Create a button for each pokemon
         let button = document.createElement("button");
@@ -90,11 +91,11 @@ let pokemonRepository = (function (){
          //creating an elemnt for name in modal content
           let name = $("<h1>" + item.name + "</h1>");         
          //creating an element for height in modal content
-          let height =$("<p>" + "height : " + item.height + "</p>");
+          let height =$("<p>" + "Height : " + item.height + "m" + "</p>");
          //creating an element for weight in modal content
-          let weight =$("<p>" + "weight : " + item.weight + "</p>");
+          let weight =$("<p>" + "Weight : " + item.weight + "g" + "</p>");
           //creting image in modal content
-          let image = $('<img class="modal-img style="width:30%>');          
+          let image = $('<img class="modal-img style="width:80%>');          
           image.attr("src", item.imageUrl);
 
          modalTitle.append(name);         
