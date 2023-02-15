@@ -21,14 +21,20 @@ let pokemonRepository = (function (){
     function addListItem(pokemon){
 
         let pokemonList = document.querySelector(".pokemon-list");
-        let listpokemon = document.createElement("li");
+        let listElement = document.createElement("li");
+        listElement.classList.add("group-list-item")
 
         //Create a button for each pokemon
         let button = document.createElement("button");
         button.innerText = pokemon.name;
-        button.classList.add("button-class");
-        listpokemon.appendChild(button);
-        pokemonList.appendChild(listpokemon);
+        button.classList.add("button-class");        
+        button.classList.add("btn");
+        button.classList.add("btn-warning");
+        button.classList.add("btn-block-sm");
+        button.setAttribute("data-toggle", "modal");
+        button.setAttribute("data-target", "#pokemon-modal");
+        listElement.appendChild(button);
+        pokemonList.appendChild(listElement);
 
         // Create an event listener to the button
         button.addEventListener("click", function () {
