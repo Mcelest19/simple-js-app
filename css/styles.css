@@ -12,12 +12,15 @@ h1 {
     font-weight: 300;
     text-align: center;    
 }
+.navbar-brand{
+    font-weight: 700;
+    font-size: 24px;
+}
 * {
     box-sizing: border-box;
   }
 .page-content{    
-    width: 600px;
-    margin: 100px auto;    
+    margin-top: 80px;    
     padding: 20px;
 }
 .page-header {
@@ -28,8 +31,9 @@ h1 {
     text-align: center;
 }
 .page-footer {
+    background: rgb(18, 176, 176);
     clear: both;
-    display: flex;
+    display: flex;    
     flex-direction: column;
     text-align: center;
 }
@@ -40,7 +44,7 @@ h1 {
     text-align:center;    
     padding: 10px;
     margin:10px 0px;
-    width: 300px;
+    width: 150px;
     font-size: 16px;
     background: #d1cbcb;
     border-radius: 10px;
@@ -48,13 +52,15 @@ h1 {
     box-shadow: 5px 5px 0px 0px #5e5b5b;
     border-color: rgb(255, 255, 255);
   }
+.navbar {
+    background: rgb(18, 176, 176);
+}
 .pokemon-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
     text-align: center;    
 }
-
 .modal-title {
     margin-top: 0;
     text-transform: capitalize;
@@ -65,5 +71,21 @@ h1 {
     margin-bottom: 0;
     display: inline;
     text-align: center;
+    border: 1px solid;
+    border-color: black;    
 }
+.modal-content {
+    background: #eaf0d3;
+    border: 3px solid;
+    border-color: black;
+    border-radius: 5px;
+    color: black;
+    /* To match real Pokemon card dimensions */
+    height: 400px;
+    margin: auto;
+    padding: 15px;
+    /* Disables browser pointer actions except pinch-zoom */
+    touch-action: pinch-zoom;
+    width: 350px;
+  }
 
