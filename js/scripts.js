@@ -68,7 +68,7 @@ let pokemonRepository = (function (){
           // Now we add the details to the item
           item.imageUrl = details.sprites.front_default;
           item.height = details.height;
-          item.types = details.types;
+          item.weight = details.weight;
         }).catch(function (e) {
           console.error(e);
         });
@@ -77,62 +77,30 @@ let pokemonRepository = (function (){
     //shows details of the selected pokemon as a modal
       function showDetails(item) {
         loadDetails(item).then(function () {
-            let modalContainer = document.querySelector ('#modal-container');
-            
-            // Clear all existing modal content
-            modalContainer.innerHTML = '';
+          let modalBody = $(".modal-body");
+          let modalTitle =$(".modal-title");
+          //let modalHeader =$(".modal-header");
+          //let modalContainer =$("#modal-container");
 
-            let modal = document.createElement('div');
-            modal.classList.add ('modal');
+          // cleaning existing content of the model
+          //modalHeader.empty();
+          modalBody.empty();
+          modalTitle.empty();
 
-            let sprite = document.createElement('img');
-            sprite.classList.add ('sprite');
-            sprite.src = item.imageUrl;
+         //creating an elemnt for name in modal content
+          let name = $("<h1>" + item.name + "</h1>");         
+         //creating an element for height in modal content
+          let height =$("<p>" + "height : " + item.height + "</p>");
+         //creating an element for weight in modal content
+          let weight =$("<p>" + "weight : " + item.weight + "</p>");
+          //creting image in modal content
+          let image = $('<img class="modal-img style="width:30%>');          
+          image.attr("src", item.imageUrl);
 
-            // Add the new modal content
-            let closeButtonElement = document.createElement ('button');
-            closeButtonElement.classList.add('modal-close');
-            closeButtonElement.innerText = 'X';
-            closeButtonElement.addEventListener ('click', hideModal)
-
-            let titleElement = document.createElement ('h1');
-            titleElement.innerText =  (item.name);
-
-            let contentElement = document.createElement ('p');
-            contentElement.innerText =('Height: ' + item.height);
-
-            // append created elements to HTML
-            modal.appendChild (closeButtonElement);
-            modal.appendChild (titleElement);
-            modal.appendChild (contentElement);
-            modalContainer.appendChild (modal);
-            modal.appendChild (sprite);
-
-
-            modalContainer.classList.add('is-visible');
-
-        //closing the modal
-        function hideModal (){
-            modalContainer.classList.remove ('is-visible');
-        }
-        // clossing modal with ESC
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')){
-              hideModal();
-            }
-          });
-        //closing the modal with the clickoutside of the modal  
-        modalContainer.addEventListener('click', (e) => {
-        let target = e.target;
-        if (target === modalContainer) {
-            hideModal();
-        }
-        });
-
-        //opening the modal with a click
-        document.querySelector ('button.button-class').addEventListener('click', () => {
-            showDetails ('Modal Title', 'Modal Content');
-        });
+         modalTitle.append(name);         
+         modalBody.append(height);
+         modalBody.append(weight);
+         modalBody.append(image);
     });
     }
     
