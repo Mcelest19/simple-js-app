@@ -16,7 +16,9 @@ h1 {
     box-sizing: border-box;
   }
 .page-content{    
-    margin-top: 40px;
+    width: 600px;
+    margin: 100px auto;    
+    padding: 20px;
 }
 .page-header {
     display: flex;
