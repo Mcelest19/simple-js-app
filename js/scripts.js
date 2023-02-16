@@ -1,9 +1,9 @@
 let pokemonRepository = (function (){
     let pokemonList = [];
-    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=120';
-   
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=120';  
         
     function add(pokemon){
+       // Validation of input type: Has to be an object and has name 
         if (
             typeof pokemon ==="object" &&
             "name" in pokemon            
@@ -18,6 +18,7 @@ let pokemonRepository = (function (){
         return pokemonList;
     }  
 
+    // This function adds a button to the website with the pokemon name    
     function addListItem(pokemon){
 
         let pokemonList = document.querySelector(".pokemon-list");
@@ -44,7 +45,7 @@ let pokemonRepository = (function (){
         
       }  
     
-      // load pokemon data details on selected pokemon
+      // fetch data from API
     function loadList() {
         return fetch(apiUrl).then(function (response) {
           return response.json();
@@ -60,7 +61,7 @@ let pokemonRepository = (function (){
           console.error(e);
         })
       }
-
+    // load pokemon data details on selected pokemon
     function loadDetails(item) {
         let url = item.detailsUrl;
         return fetch(url).then(function (response) {
@@ -116,12 +117,7 @@ let pokemonRepository = (function (){
     }
 })();
 
-
-/*Loop over pokemonList
-pokemonRepository.getAll().forEach(function (pokemon) {  
-    pokemonRepository.addListItem(pokemon);
-});  */   
-
+// Load Pokemons from the API and print each pokemon on the website
 pokemonRepository.loadList().then(function() {
     // Now the data is loaded!
     pokemonRepository.getAll().forEach(function(pokemon){
