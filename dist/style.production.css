@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
     --secondary-blackground:  rgb(18, 176, 176);
     --modal-background: #ebf6c4; 
@@ -27,13 +34,16 @@ h1 {
     font-size: 24px;
 }
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 .page-content{    
     margin-top: 80px;    
     padding: 20px;
 }
 .page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 600;
     margin: 0 auto; 
@@ -43,8 +53,13 @@ h1 {
 .page-footer {
     background: var(--secondary-blackground);
     clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;    
-    flex-direction: column;
+    -webkit-box-orient: vertical;    
+    -webkit-box-direction: normal;    
+        -ms-flex-direction: column;    
+            flex-direction: column;
     text-align: center;
 }
 .button-class {
@@ -59,7 +74,8 @@ h1 {
     background: var(--primary-button_color);
     border-radius: 10px;
     font-weight: 800;
-    box-shadow: 5px 5px 0px 0px  #5e5b5b;
+    -webkit-box-shadow: 5px 5px 0px 0px  #5e5b5b;
+            box-shadow: 5px 5px 0px 0px  #5e5b5b;
     border-color: var(--border-color-secondary);
   }
 .navbar {
@@ -95,7 +111,7 @@ h1 {
     margin: auto;
     padding: 15px;
     /* Disables browser pointer actions except pinch-zoom */
-    touch-action: pinch-zoom;
+    -ms-touch-action: pinch-zoom;
+        touch-action: pinch-zoom;
     width: 350px;
   }
-
