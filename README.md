@@ -38,8 +38,8 @@ After you're finished please remove all the comments and instructions!
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
+    - [Tech Stack](#tech-stack)    
+    - [How to use](#how-to-use)
   - [🚀 Live Demo](#live-demo)-
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
@@ -49,15 +49,13 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 [Pokedex_App] <a name="Pokedex App"></a>
 
-> Describe your project in 1 or 2 sentences.
 
-The **[Pokedex_App]** displays list of pokemons and details about them. Data is loaded through an external api (https://pokeapi.co/).
+The **[Pokedex_App]** displays list of 150 pokemons and details about them. Data is loaded through an external api (https://pokeapi.co/).
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Javascript</summary>  
@@ -71,15 +69,13 @@ The **[Pokedex_App]** displays list of pokemons and details about them. Data is 
 <summary>CSS</summary> 
 </details>
 
-<!-- Features -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Key Features <a name="key-features"></a>
+<!-- How to use -->
 
-> Describe between 1-3 key features of the application.
+### How to use <a name="how_to_use"></a>
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+You can click on the buttons to see the pomémon's height, weight and an image of it. The modal window can be closed by clicking on the 'Close' button, clicking outside the window or pressing 'Escape'.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,17 +83,14 @@ The **[Pokedex_App]** displays list of pokemons and details about them. Data is 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
 - [Live Demo Link](https://mcelest19.github.io/simple-js-app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-
-> Mention all of the collaborators of this project.
 
 👤 **Marina Celestino**
 
@@ -111,8 +104,6 @@ The **[Pokedex_App]** displays list of pokemons and details about them. Data is 
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
 - [will implemented search function] **[implement_search_function]**
 
 
@@ -122,10 +113,9 @@ The **[Pokedex_App]** displays list of pokemons and details about them. Data is 
 
 
 <!-- ACKNOWLEDGEMENTS -->
-
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
+
 
 I would like to thank my mentor Ramadhan Aheebwa.
 
